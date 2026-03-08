@@ -17,6 +17,13 @@ def read_index():
         return HTMLResponse(content="<h1>index.html not found</h1>", status_code=404)
     return FileResponse(file_path)
 
+@app.get("/visualization.html")
+def read_visualization():
+    file_path = "static/visualization.html"
+    if not os.path.exists(file_path):
+        return HTMLResponse(content="<h1>visualization.html not found</h1>", status_code=404)
+    return FileResponse(file_path)
+
 class CalcRequest(BaseModel):
     a: float
     b: float

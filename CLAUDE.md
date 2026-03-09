@@ -73,7 +73,7 @@ three: "https://unpkg.com/three@0.160.0/build/three.module.js"
 
 **运行方式**:
 ```bash
-uvicorn calculator:app --reload
+uv run uvicorn calculator:app --host 0.0.0.0 --port 8002
 ```
 
 ---
